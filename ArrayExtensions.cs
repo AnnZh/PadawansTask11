@@ -9,12 +9,11 @@ namespace PadawansTask11
             // put your code here
             //throw new NotImplementedException();
 
-            if (array.Length < 3)
-                throw new ArgumentException();
+            if (array == null)
+                throw new ArgumentNullException();
             if (accuracy <= 0 || accuracy >= 1)
                 throw new ArgumentOutOfRangeException();
-            if(array == null)
-                throw new ArgumentNullException();
+
 
 
             double left = array[0];
