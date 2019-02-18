@@ -11,6 +11,10 @@ namespace PadawansTask11
 
             if (array.Length < 3)
                 throw new ArgumentException();
+            if (accuracy <= 0 || accuracy >= 1)
+                throw new ArgumentOutOfRangeException();
+            if(array == null)
+                throw new ArgumentNullException();
 
 
             double left = array[0];
@@ -23,7 +27,7 @@ namespace PadawansTask11
 
             for (int i = 1; i < array.Length - 1; i++)
             {
-                if (left == right && left >= 0 && left <= 1)
+                if (left == right)
                 { 
                     return i;
                 }
